@@ -1,11 +1,11 @@
-import {Card, CardBody, CardTitle, CardText, CardSubtitle, Button} from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardSubtitle, Button } from 'reactstrap';
 
-export default function BikeCard({bike, setDetailsBikeId}) {
+export default function BikeCard({ bike, setDetailsBikeId }) {
     return (
         <Card
-        color="dark"
-        outline
-        style={{marginBottom: '4px'}}
+            color="dark"
+            outline
+            style={{ marginBottom: '4px' }}
         >
             <CardBody>
                 <CardTitle tag="h5">
@@ -20,13 +20,13 @@ export default function BikeCard({bike, setDetailsBikeId}) {
                 <CardText>
                     Color: {bike.color}
                 </CardText>
-                <Button color="dark" onClick={() => { 
-                    setDetailsBikeId(bike.id); 
+                <Button color="dark" onClick={() => {
+                    setDetailsBikeId(bike.id);
                     window.scrollTo({
-                                top: 0,
-                                left: 0,
-                                behavior: 'smooth'
-                                });
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
                 }}>
                     Show Details
                 </Button>

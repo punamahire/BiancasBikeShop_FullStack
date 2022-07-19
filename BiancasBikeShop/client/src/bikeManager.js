@@ -1,13 +1,15 @@
 const apiUrl = '/api/bike';
 
 export const getBikes = () => {
-    //add implementation here... 
+    return fetch(apiUrl)
+        .then(resp => resp.json());
 }
 
 export const getBikeById = (id) => {
-    //add implementation here... 
+    return fetch(apiUrl + `/${id}`).then(resp => resp.json());
 }
 
 export const getBikesInShopCount = () => {
-    //add implementation here... 
+    return fetch(apiUrl + '/getbikesinshop')
+        .then(resp => resp.json());
 }
